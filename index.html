@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Invitation</title>
+
+<style>
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family:Arial, sans-serif;
+  background:black;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* COVER */
+
+#cover{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:url('background.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index:9999;
+}
+
+.cover-overlay{
+  background:rgba(0,0,0,0.65);
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  padding:20px;
+}
+
+.cover-overlay h1{
+  font-size:55px;
+  color:#ffd369;
+  margin:10px 0;
+}
+
+.cover-overlay p{
+  font-size:20px;
+}
+
+.open-btn{
+  margin-top:30px;
+  padding:15px 35px;
+  border:none;
+  border-radius:15px;
+  background:#ffd369;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  background:url('background.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-overlay{
+  background:rgba(0,0,0,0.65);
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:60px;
+  color:#ffd369;
+}
+
+.hero p{
+  font-size:22px;
+}
+
+/* CARD */
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+  margin-bottom:30px;
+  padding:35px;
+  border-radius:25px;
+  text-align:center;
+  backdrop-filter:blur(5px);
+  animation:fade 2s;
+}
+
+.card h2{
+  color:#ffd369;
+}
+
+.card p{
+  line-height:2;
+  font-size:18px;
+}
+
+/* FOTO */
+
+.foto{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.foto img{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid #ffd369;
+}
+
+/* BUTTON */
+
+.button{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#ffd369;
+  color:black;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+/* COUNTDOWN */
+
+#countdown{
+  font-size:35px;
+  color:#ffd369;
+  margin-top:20px;
+}
+
+/* GALERI */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:20px;
+}
+
+/* ANIMATION */
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#aaa;
+}
+
+audio{
+  margin-top:20px;
+  width:250px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+.hero h1{
+  font-size:40px;
+}
+
+.cover-overlay h1{
+  font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+
+<div id="cover">
+
+<div class="cover-overlay">
+
+<p>The Wedding Of</p>
+
+<h1>Yoga & Aulia</h1>
+
+<p>Kepada Yth. Tamu Undangan</p>
+
+<button class="open-btn" onclick="openInvitation()">
+Buka Undangan
+</button>
+
+</div>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-overlay">
+
+<p>The Wedding Of</p>
+
+<h1>Yoga & Aulia</h1>
+
+<p>12 Desember 2026</p>
+
+<div id="countdown"></div>
+
+<audio controls autoplay loop>
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<!-- MEMPELAI -->
+
+<div class="card">
+
+<h2>Assalamu'alaikum Wr. Wb.</h2>
+
+<p>
+
+Dengan memohon rahmat dan ridho Allah SWT,<br>
+kami bermaksud mengundang Bapak/Ibu/Saudara/i<br>
+untuk hadir dalam acara pernikahan kami.
+
+</p>
+
+<div class="foto">
+
+<img src="cowok.jpg">
+<img src="cewek.jpg">
+
+</div>
+
+</div>
+
+<!-- ACARA -->
+
+<div class="card">
+
+<h2>Detail Acara</h2>
+
+<p>
+
+📅 Minggu, 12 Desember 2026<br><br>
+
+🕒 10.00 WIB - Selesai<br><br>
+
+📍 Gedung Bahagia<br>
+Jakarta Selatan
+
+</p>
+
+<a class="button"
+href="https://maps.google.com">
+Buka Google Maps
+</a>
+
+</div>
+
+<!-- GALERI -->
+
+<div class="card">
+
+<h2>Galeri</h2>
+
+<div class="gallery">
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+<img src="foto4.jpg">
+
+</div>
+
+</div>
+
+<!-- RSVP -->
+
+<div class="card">
+
+<h2>Konfirmasi Kehadiran</h2>
+
+<p>
+Silakan hubungi WhatsApp berikut:
+</p>
+
+<a class="button"
+href="https://wa.me/6281234567890">
+WhatsApp
+</a>
+
+</div>
+
+<!-- PENUTUP -->
+
+<div class="card">
+
+<h2>Terimakasih</h2>
+
+<p>
+
+Merupakan suatu kehormatan dan kebahagiaan bagi kami<br>
+apabila Bapak/Ibu/Saudara/i berkenan hadir<br>
+serta memberikan doa restu.
+
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Wedding Invitation
+
+</footer>
+
+<script>
+
+/* BUKA UNDANGAN */
+
+function openInvitation(){
+
+document.getElementById("cover").style.display="none";
+
+}
+
+/* COUNTDOWN */
+
+var target = new Date("Dec 12, 2026 10:00:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = target - now;
+
+var days = Math.floor(distance / (1000*60*60*24));
+
+document.getElementById("countdown").innerHTML =
+days + " Hari Lagi";
+
+},1000);
+
+</script>
+
+</body>
+</html>
